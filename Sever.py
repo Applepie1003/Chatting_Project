@@ -5,7 +5,7 @@ import time
 
 def send(sock):
     while True:
-        sendData = input('>>>')
+        sendData = input('')
         sock.send(sendData.encode('utf-8'))
 
 
@@ -21,7 +21,7 @@ serverSock = socket(AF_INET, SOCK_STREAM)
 serverSock.bind(('', port))
 serverSock.listen()
 
-print('%d번 포트로 접속 대기중...'%port)
+print('%d번 포트로 접속 대기중...' % port)
 
 connectionSock, addr = serverSock.accept()
 
